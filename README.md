@@ -6,6 +6,9 @@ show databases;
 
 mysql> show databases;
 
+github for chinook:
+https://github.com/lerocha/chinook-database/tree/master/ChinookDatabase/DataSources
+
 output:
 +--------------------+
 | Database           |
@@ -44,3 +47,50 @@ select count(*) from Artist; /* counts number of rows in artist and album tables
 
 type:
 source test.sql                         (to run the test.sql script) ..
+
+select * from Album  limit 5;           (limits query results to 5)
+
+select Title, Name from Album                               (shows artist name and album)
+join Artist on Album.ArtistId = Artist.ArtistId         (join artist and album tables using artistId to match them)
+limit 5;
+
+
+INSERTING RECORDS:
+
+insert into Genre (Name) values('Trad');    (at mysql or script file. the command here creates a new genre)
+
+SELECT LAST_INSERT_ID();                     (find ID of last insert)
+select * from Genre where GenreId = 26;     (querying that ID returns the genre we created)
+
+
+UPDATING RECORDS:       (can be entered at MySQL prompt or via script file)
+
+update Genre set Name ='Traditional' where Name = 'Trad';       (changes Genre from Trad to Traditional)
+
+select * from Genre;                      (query Genre table shows this change)
+
+
+DELETING RECORDS:       (at MySQL or script file)
+
+delete from Genre where Name = 'Traditional';       (delete Traditional file)
+
+select * from Genre where Name = 'Traditional';     (won't find it as we deleted it...empty set)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
