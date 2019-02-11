@@ -1,0 +1,25 @@
+/*
+Select the `InvoiceDate`, `BillingAddress` and `Total` from the
+`Invoice` table. Order them descendingly according to the `InvoiceDate`
+*/
+
+
+
+select InvoiceDate, BillingAddress, Total From Invoice
+    order by InvoiceDate desc;
+    
+    
+    
+    
+output: samp-le...as is 412 rows
+
+ InvoiceDate         | BillingAddress                            | Total |
++---------------------+-------------------------------------------+-------+
+| 2013-12-22 00:00:00 | 12,Community Centre                       |  1.99 |
+| 2013-12-14 00:00:00 | Porthaninkatu 9                           | 13.86 |
+| 2013-12-09 00:00:00 | Rua dos Campeões Europeus de Viena, 4350  |  8.91 |
+| 2013-12-06 00:00:00 | 796 Dundas Street West                    |  5.94 |
+| 2013-12-05 00:00:00 | 319 N. Frances Street                     |  3.96 |
+| 2013-12-04 00:00:00 | 801 W 4th Street                          |  1.98 |
+| 2013-12-04 00:00:00 | 69 Salem Street                           |  1.98 |
+| 2013-11-21 00:00:00 | 541 Del Medio Avenue                      |  0.99 |
