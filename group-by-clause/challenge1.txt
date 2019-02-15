@@ -1,0 +1,12 @@
+How many customers do we have in the City of Berlin             Expected : 2
+
+select count(city) from Customer where city = "Berlin";
+
+output:
+
++-------------+
+| count(city) |
++-------------+
+|           2 |
++-------------+
+1 row in set (0.00 sec)
