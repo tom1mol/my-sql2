@@ -1,0 +1,54 @@
+An insert statement consists of the tables we want to insert into, the columns within that table that we want to set values for, 
+and the values for those columns.
+So we're going to start by inserting a new MediaType. the ID is generated automatically.
+So we're going to specify a value of test MediaType 1 for the name of the MediaType.:
+
+INSERT INTO MediaType (Name)
+VALUES ("Test Media Type 1");
+
+INSERT INTO Album (Title, ArtistId)
+VALUES ("Boy", 150);
+                                            ---------------
+So first, we're going to select AlbumID for the album with title Boy.
+
+SELECT AlbumId FROM Album WHERE Title = "Boy";
+
+OUTPUT:
++---------+
+| AlbumId |
++---------+
+|     348 |
++---------+
+1 row in set (0.00 sec)
+
+                                        ----------------------------
+And now we'll go ahead and get the MediaTypeID.
+And that is for the protected AAC audio file.
+
+SELECT MediaTypeId FROM MediaType WHERE Name = "Protected AAC audio file";
+
+output:
++-------------+
+| MediaTypeId |
++-------------+
+|           2 |
++-------------+
+1 row in set (0.00 sec)
+
+                                                -------------------------
+And now we get the GenreID of the genre rock.
+
+SELECT GenreId FROM Genre WHERE Name = "Rock";
+
+OUTPUT:
++---------+
+| GenreId |
++---------+
+|       1 |
++---------+
+1 row in set (0.00 sec)
+                                            ---------------------------------
+                                            
+INSERT INTO Track (Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice)
+VALUES ("I Will Follow", 348, 2, 1, "U2", 220000, 1234, 0.99);
+
